@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Table from './Table';
+import React, { useMemo } from 'react';
 
 function App() {
+  // Define our mock data
+  const data = [
+    {
+      col1: 'Joe Boyle',
+      col2: 'AGENT',
+      col3: 'On',
+      col4: 'Activated on 08/22/2020',
+    },
+    {
+      col1: 'James Christian',
+      col2: 'AGENT',
+      col3: 'Off',
+      col4: 'Not Active',
+    },
+    {
+      col1: 'Kingston Harris',
+      col2: 'AGENT',
+      col3: 'Off',
+      col4: 'Not Active',
+    },
+    {
+      col1: 'Daniel Smith',
+      col2: 'BROKER',
+      col3: 'On',
+      col4: 'Activated on 08/22/2020',
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Table data={data}/>
   );
 }
 
